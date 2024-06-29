@@ -27,51 +27,6 @@ init:
 # The game starts here.
 
 label start:
-    scene bg ship with dissolve
-    pause 1.0
-
-    show yamba normal e1m1 at center:
-        yoffset 1080
-        ease 0.7 yoffset 0
-
-
-    y "Hello! Welcome to this demo!"
-    y e1m2 "I'm very proud to show you what I've been working on: a brand new phone system for Ren'Py!"
-    y phone e1m1 "And to show you how it work, we have a special guest!"
-
-    #Phone conversation start
-    show yamba e1m2_b:
-        ease 0.5 xalign 0.7 
-
-    nvl_narrator "Nighten added Eileen to the group"
-    y_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
-    e_nvl "who's this?"
-    y_nvl e2m1_b "haha, silly you"
-    y_nvl e1m2_b "We talked about showing off the phone the other day, remember?"
-    e_nvl "it's today? {image=emoji/fear.png}"
-    e_nvl "oops sorry night', I forgot {image=emoji/sweat.png}"
-    y_nvl "No problem, you must be quite busy!"
-    y_nvl e2m2_b "congrat on showing the emoji tho {image=emoji/clap.png}"
-    e_nvl "Nothing magical, it's just a {a=https://www.renpy.org/doc/html/text.html#text-tag-image}image tag{/a} :)"
-    y_nvl e1m2 "But since we use regular renpy, we can use the same principle to send pictures!"
-    e_nvl "Right! Let me take a selfie {image=emoji/camera.png}"
-    show yamba e1m2_b
-    e_nvl "{image=EileenSelfieSmall.png}"
-    y_nvl e2m1_b "awww, you look fantastic!"
-    show yamba e2m2_b
-    e_nvl "A bit low res but hey, the pic has to fit the screen somehow"
-    
-    y_nvl "Thank you Eileen for doing this demo with me!"
-    e_nvl "no problem, I hope people will make good use of it!"
-    e_nvl "byyee {image=emoji/wave.png}"
-
-
-    show yamba:
-        ease 0.5 xalign 0.5 
-
-    y e1m2 "That's it for the demo!"
-    y normal e1m2 "Do you have any question?"
-
 
     scene bg park
     y "Welcome to the park!"
@@ -127,90 +82,121 @@ label deleteduser:
     label deleted_user:
     $ Deleted_user_visited += 1
     if Deleted_user_visited == 1:
-        "Yamba 05/22/2021 5:55 PM"
-        "I miss you. I do everyday..."
-        "I still miss you so much"
-        "where have the times gone"
-        "baby it's all wrong"
-        "where were the plans we made for two"
-        # Ren'Py automatically scrolls, but you can use pauses or player clicks to pace the dialogue.
-        "I will wait for you patiently..."
-        "I will let you have your freedom and date other guys"
-        "and then I want to show you that I can be better than I was when we dated"
-        "I will be better"
-        "I will start working out, being more positive, getting a good job, learning anger control"
-        "I am taking therapy"
-        "I am learning how not to be jealous and insecure"
-        "please enjoy your life"
-        "until you are able to be with me"
-        "I love you"
-        "Yamba 05/22/2021 10:58PM"
-        "I miss you"
-        "how are you able to move on"
-        "and forget about me so easily"
-        "did I really mean so little"
-        "I'm sorry that I became bad"
-        "but"
-        "I thought I still meant something"
-        "I really cared about you until the end"
-        "I was just weak and insecure"
-        "I'm so sorry"
+        
+        scene bg ship with dissolve
+        pause 1.0
 
-        "Yamba 05/25/2021 8:10AM"
-        "I love you"
-        "I miss you everyday still"
-        "But I know you are happier without me"
-        "And life is long, so maybe I will have another chance"
-        "And even if not, I am happy to have met you"
-        "And I just want to be your friend"
-        "I love you"
-
-        "Yamba 05/27/2021 3.24PM"
-        "I miss you"
-        "I love you"
-        "I miss you everyday"
-        "I love you baby"
-        "I love you so much"
-
-        "Yamba 06/01/2021 12:11 PM"
-        "I miss you"
-        "baby"
-
-        "Yamba 07/14/2021 2:49 PM"
-        "I miss you so much"
-        "why did you have to date someone other than me"
-        "why do you do this"
-        "I went to hospital because of how much u hurt me"
-        "but I still can't resent you"
-        "because l still love you"
-
-        "I loved how much you loved me and needed me"
-        "I loved how much you wanted me"
-        "I miss being there for you"
-        "and doing what you needed"
-        "even if I put too much pressure on myself"
-        "and got too dependent on your affection"
-        "I love you so much"
-        "I miss playing with you"
-        "being with you made my heart flutter"
-        "even if it was games I don't usually play"
-        "I love you"
+        show yamba normal e1m1 at center:
+            yoffset 1080
+            ease 0.7 yoffset 0
 
 
-        # "[Your content continues here.]"
+        y "Hello!"
+        y e1m2 "bamba!"
+        y phone e1m1 "let's look at phone!"
+
+        #Phone conversation start
+        show yamba e1m2_b:
+            ease 0.5 xalign 0.7 
+
+        nvl_narrator "05/22/2021 5:55 PM"
+        y_nvl e2m2_b "I miss you. I do everyday..."
+        y_nvl e1m2_b "I still miss you so much"
+        y_nvl e1m2_b "where have the times gone"
+        y_nvl e1m2_b "baby it's all wrong"
+        y_nvl e1m2_b "where were the plans we made for two"
+        y_nvl e1m2_b "I will wait for you patiently..."
+        y_nvl e1m2_b "I will let you have your freedom and date other guys"
+        y_nvl e1m2_b "and then I want to show you that I can be better than I was when we dated"
+        y_nvl e1m2_b "I will be better"
+        y_nvl e1m2_b "I will start working out, being more positive, getting a good job, learning anger control"
+        y_nvl e1m2_b "I am taking therapy"
+        y_nvl e1m2_b "I am learning how not to be jealous and insecure"
+        y_nvl e1m2_b "please enjoy your life"
+        y_nvl e1m2_b "until you are able to be with me"
+        y_nvl e1m2_b "I love you"
+        nvl_narrator "05/22/2021 10:58PM"
+        y_nvl e1m2_b "I miss you"
+        y_nvl e1m2_b "how are you able to move on"
+        y_nvl e1m2_b "and forget about me so easily"
+        y_nvl e1m2_b "did I really mean so little"
+        y_nvl e1m2_b "I'm sorry that I became bad"
+        y_nvl e1m2_b "but"
+        y_nvl e1m2_b "I thought I still meant something"
+        y_nvl e1m2_b "I really cared about you until the end"
+        y_nvl e1m2_b "I was just weak and insecure"
+        y_nvl e1m2_b "I'm so sorry"
+
+        nvl_narrator "05/25/2021 8:10AM"
+        y_nvl e1m2_b "I love you"
+        y_nvl e1m2_b "I miss you everyday still"
+        y_nvl e1m2_b "But I know you are happier without me"
+        y_nvl e1m2_b "And life is long, so maybe I will have another chance"
+        y_nvl e1m2_b "And even if not, I am happy to have met you"
+        y_nvl e1m2_b "And I just want to be your friend"
+        y_nvl e1m2_b "I love you"
+
+        nvl_narrator "05/27/2021 3.24PM"
+        y_nvl e1m2_b "I miss you"
+        y_nvl e1m2_b "I love you"
+        y_nvl e1m2_b "I miss you everyday"
+        y_nvl e1m2_b "I love you baby"
+        y_nvl e1m2_b "I love you so much"
+
+        nvl_narrator "06/01/2021 12:11 PM"
+        y_nvl e1m2_b "I miss you"
+        y_nvl e1m2_b "baby"
+
+        nvl_narrator "07/14/2021 2:49 PM"
+        y_nvl e1m2_b "I miss you so much"
+        y_nvl e1m2_b "why did you have to date someone other than me"
+        y_nvl e1m2_b "why do you do this"
+        y_nvl e1m2_b "I went to hospital because of how much u hurt me"
+        y_nvl e1m2_b "but I still can't resent you"
+        y_nvl e1m2_b "because l still love you"
+
+        y_nvl e1m2_b "I loved how much you loved me and needed me"
+        y_nvl e1m2_b "I loved how much you wanted me"
+        y_nvl e1m2_b "I miss being there for you"
+        y_nvl e1m2_b "and doing what you needed"
+        y_nvl e1m2_b "even if I put too much pressure on myself"
+        y_nvl e1m2_b "and got too dependent on your affection"
+        y_nvl e1m2_b "I love you so much"
+        y_nvl e1m2_b "I miss playing with you"
+        y_nvl e1m2_b "being with you made my heart flutter"
+        y_nvl e1m2_b "even if it was games I don't usually play"
+        y_nvl e1m2_b "I love you"
+        $ Deleted_user_visited += 1
+
+        show yamba:
+            ease 0.5 xalign 0.5 
+
+        y normal e1m2 "are you ever gonna reply?"
+        y normal e1m2 "dont give me hope"
+
         menu:
             "Continue reading":
                 jump deleted_user_continue
                 y "yesbamba"
     elif Deleted_user_visited < 4:
-        "I click into the DM again today..."
-        "Yamba 05/22/2021 5:55 PM"
-        "I miss you. I do everyday..."
-        # "[Condensed content for subsequent visits.]"
+        y phone e1m1 "I click into the DM again..."
+
+        #Phone conversation start
+        show yamba e1m2_b:
+            ease 0.5 xalign 0.7 
+        nvl_narrator ""
+        $ Deleted_user_visited += 1
+
+        show yamba:
+            ease 0.5 xalign 0.5 
+
+        y normal e1m2 "are you ever gonna reply?"
+        y normal e1m2 "dont give me hope"
+
         menu:
             "Continue reading":
                 jump deleted_user_continue
-                y "nobamba"
+                y "yesbamba"
     else:
         "Months of regret and apologies are just to mask the truth."
         
@@ -226,7 +212,7 @@ label deleteduser:
         "The only thing that makes me feel a little better is that he swore on his favourite music artist that he wouldn't date her - I wanted to trust his words. "
         "..."
         "On one of my regular calls with Jambi in his server"
-        # jump jambiserver
+        jump jambiserver
 
         # "[Additional content for further visits.]"
         menu:
@@ -235,4 +221,9 @@ label deleteduser:
 
 label deleted_user_continue:
     "No reply."
-    return
+    "..."
+    "......"
+    "........."
+    "let's see if there's reply now."
+    "............"
+    jump deleted_user
