@@ -16,6 +16,7 @@ init:
     $ joined = 0
     $ disconnected = 0
 
+
 # The game starts here.
 
 label start:
