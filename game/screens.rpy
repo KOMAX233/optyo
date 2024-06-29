@@ -345,7 +345,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-    outlines [ (absolute(3), "#008080", absolute(0), absolute(0)) ]
+    # outlines [ (absolute(3), "#660066", absolute(0), absolute(0)) ]
     xalign 0.5
 
 

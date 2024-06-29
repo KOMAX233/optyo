@@ -28,11 +28,11 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#660066'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#fff070'
+define gui.idle_color = '#c199c1'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#606060'
+define gui.idle_small_color = '#ffffff'
 
 ## The color that is used for buttons and bars that are hovered.
 define gui.hover_color = '#ff9d00'
@@ -42,7 +42,7 @@ define gui.hover_color = '#ff9d00'
 define gui.selected_color = '#ff7600'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#707070'
+define gui.insensitive_color = '#c199c1'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -50,7 +50,8 @@ define gui.muted_color = '#a366a3'
 define gui.hover_muted_color = '#c199c1'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
+define gui.text_color = '#ffffff'
+define gui.dialogue_text_outlines = [(1, "#404040", 0, 0)]
 define gui.interface_text_color = '#404040'
 
 
@@ -106,8 +107,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_xpos = 95
+define gui.name_ypos = 80
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
