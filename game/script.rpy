@@ -3,7 +3,14 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define y = Character("yamba")
+define y = Character("Yamba", image="yamba")
+
+define y_nvl = Character("Yamba", kind=nvl, image="yamba", callback=Phone_SendSound)
+define e_nvl = Character("Eileen", kind=nvl, callback=Phone_ReceiveSound)
+
+define config.adv_nvl_transition = None
+define config.nvl_adv_transition = Dissolve(0.3)
+
 init:
     # Variables initialization
     $ option = "1"
@@ -20,6 +27,51 @@ init:
 # The game starts here.
 
 label start:
+    scene bg ship with dissolve
+    pause 1.0
+
+    show yamba normal e1m1 at center:
+        yoffset 1080
+        ease 0.7 yoffset 0
+
+
+    y "Hello! Welcome to this demo!"
+    y e1m2 "I'm very proud to show you what I've been working on: a brand new phone system for Ren'Py!"
+    y phone e1m1 "And to show you how it work, we have a special guest!"
+
+    #Phone conversation start
+    show yamba e1m2_b:
+        ease 0.5 xalign 0.7 
+
+    nvl_narrator "Nighten added Eileen to the group"
+    y_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
+    e_nvl "who's this?"
+    y_nvl e2m1_b "haha, silly you"
+    y_nvl e1m2_b "We talked about showing off the phone the other day, remember?"
+    e_nvl "it's today? {image=emoji/fear.png}"
+    e_nvl "oops sorry night', I forgot {image=emoji/sweat.png}"
+    y_nvl "No problem, you must be quite busy!"
+    y_nvl e2m2_b "congrat on showing the emoji tho {image=emoji/clap.png}"
+    e_nvl "Nothing magical, it's just a {a=https://www.renpy.org/doc/html/text.html#text-tag-image}image tag{/a} :)"
+    y_nvl e1m2 "But since we use regular renpy, we can use the same principle to send pictures!"
+    e_nvl "Right! Let me take a selfie {image=emoji/camera.png}"
+    show yamba e1m2_b
+    e_nvl "{image=EileenSelfieSmall.png}"
+    y_nvl e2m1_b "awww, you look fantastic!"
+    show yamba e2m2_b
+    e_nvl "A bit low res but hey, the pic has to fit the screen somehow"
+    
+    y_nvl "Thank you Eileen for doing this demo with me!"
+    e_nvl "no problem, I hope people will make good use of it!"
+    e_nvl "byyee {image=emoji/wave.png}"
+
+
+    show yamba:
+        ease 0.5 xalign 0.5 
+
+    y e1m2 "That's it for the demo!"
+    y normal e1m2 "Do you have any question?"
+
 
     scene bg park
     y "Welcome to the park!"

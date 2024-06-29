@@ -370,6 +370,8 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     use navigation
 
+    add "images/logo.png" xalign 0.5 yalign 0.2 size(1200, 400)
+
     if gui.show_name:
 
         vbox:
@@ -1307,35 +1309,37 @@ style notify_text:
 
 
 screen nvl(dialogue, items=None):
+    if nvl_mode == "phone":
+        use PhoneDialogue(dialogue, items)
+    else:
+        window:
+            style "nvl_window"
 
-    window:
-        style "nvl_window"
+            has vbox:
+                spacing gui.nvl_spacing
 
-        has vbox:
-            spacing gui.nvl_spacing
+            ## Displays dialogue in either a vpgrid or the vbox.
+            if gui.nvl_height:
 
-        ## Displays dialogue in either a vpgrid or the vbox.
-        if gui.nvl_height:
+                vpgrid:
+                    cols 1
+                    yinitial 1.0
 
-            vpgrid:
-                cols 1
-                yinitial 1.0
+                    use nvl_dialogue(dialogue)
+
+            else:
 
                 use nvl_dialogue(dialogue)
 
-        else:
+            ## Displays the menu, if given. The menu may be displayed incorrectly if
+            ## config.narrator_menu is set to True.
+            for i in items:
 
-            use nvl_dialogue(dialogue)
+                textbutton i.caption:
+                    action i.action
+                    style "nvl_button"
 
-        ## Displays the menu, if given. The menu may be displayed incorrectly if
-        ## config.narrator_menu is set to True.
-        for i in items:
-
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
-
-    add SideImage() xalign 0.0 yalign 1.0
+        add SideImage() xalign 0.0 yalign 1.0
 
 
 screen nvl_dialogue(dialogue):
