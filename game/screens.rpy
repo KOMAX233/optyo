@@ -311,8 +311,6 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Options") action ShowMenu("preferences")
-
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -321,12 +319,14 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Extra") action ShowMenu("help")
+
+        textbutton _("Config") action ShowMenu("preferences")
 
         if renpy.variant("pc"):
 
