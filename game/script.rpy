@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -149,7 +149,7 @@ label deleteduser:
 
         nvl_narrator "07/14/2021 2:49 PM"
         y_nvl e1m2_b "I miss you so much"
-        y_nvl e1m2_b "why did you have to date someone other than me"
+        y_nvl e1m2_b "why did you have to date someone older than me"
         y_nvl e1m2_b "why do you do this"
         y_nvl e1m2_b "I went to hospital because of how much u hurt me"
         y_nvl e1m2_b "but I still can't resent you"
