@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -171,8 +171,8 @@ label deleteduser:
         show yamba:
             ease 0.5 xalign 0.5 
 
-        y normal e1m2 "are you ever gonna reply?"
-        y normal e1m2 "dont give me hope"
+        y normal e1m2 "is she ever gonna reply?"
+        y normal e1m2 "please dont give me hope"
 
         menu:
             "Continue reading":
@@ -190,8 +190,8 @@ label deleteduser:
         show yamba:
             ease 0.5 xalign 0.5 
 
-        y normal e1m2 "are you ever gonna reply?"
-        y normal e1m2 "dont give me hope"
+        y normal e1m2 "is she ever gonna reply?"
+        y normal e1m2 "please dont give me hope"
 
         menu:
             "Continue reading":
@@ -220,10 +220,6 @@ label deleteduser:
                 jump deleted_user_continue
 
 label deleted_user_continue:
-    "No reply."
-    "..."
-    "......"
-    "........."
     "let's see if there's reply now."
     "............"
     jump deleted_user
